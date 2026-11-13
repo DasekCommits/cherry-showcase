@@ -1,12 +1,12 @@
-# Nōd — offline POS for cafés & bars
+# Nōd: offline POS for cafés & bars
 
 > **Showcase only.** The source code is private. This page describes what Nōd does,
-> how it is built, and — mostly — how it is secured.
+> how it is built and, mostly, how it is secured.
 
 Nōd is a point-of-sale system I built for a real café-bar in Greece and now license
 to other shops. Waiters take orders on their phones over the shop Wi-Fi; the till PC
 prints kitchen/bar slips and fiscal receipts; the manager sees shifts and reports.
-It runs **fully offline** — the internet is only used for licences and updates.
+It runs **fully offline**. The internet is only used for licences and updates.
 
 | Order screen (till) | Reports |
 |---|---|
@@ -19,7 +19,7 @@ It runs **fully offline** — the internet is only used for licences and updates
 - **Tables & orders** from any phone on the shop Wi-Fi (PWA, PIN login per employee)
 - **Kitchen / bar slips** on thermal printers (raw ESC/POS over the network)
 - **Fiscal receipts** through the Greek fiscal device bridge (Fislink)
-- **Item-level cancellations**, split payments, discounts — all attributed per employee
+- **Item-level cancellations**, split payments, discounts, all attributed per employee
 - **Shifts & cash-up**: declared vs. counted cash, per-shift and per-day reports
 - **Work schedule**, notes, menu editor with drag-to-reorder and per-category options
 - **Annual licences and signed auto-updates** through a small cloud panel
@@ -43,7 +43,7 @@ flowchart LR
 ```
 
 - **Zero dependencies.** The till server uses only Node.js built-ins (`node:http`,
-  `node:sqlite`, `node:crypto`, `node:zlib`) — no `npm install`, no supply chain to trust.
+  `node:sqlite`, `node:crypto`, `node:zlib`). No `npm install`, no supply chain to trust.
 - **One file.** Packaged as a single `POS.exe` (Node Single Executable Application).
 - **Data outside the program folder** (`%ProgramData%`), so replacing the program never
   touches sales data.
@@ -87,6 +87,6 @@ Node SEA · PHP 8 · Ed25519 / WebCrypto · TOTP · HTML/CSS
 
 ---
 
-Built by **Filippos Dasek** — [dasek.dev](https://dasek.dev) · in daily use at a café-bar in Greece.
+Built by **Filippos Ntasek** · [dasek.dev](https://dasek.dev) · in daily use at a café-bar in Greece.
 
-© 2026 Filippos Dasek. All rights reserved. The source code is private; Nōd is available under licence.
+© 2026 Filippos Ntasek. All rights reserved. The source code is private and Nōd is available under licence.
