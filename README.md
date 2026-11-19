@@ -1,9 +1,9 @@
-# Nōd: offline POS for cafés & bars
+# Cherry: offline POS for cafés & bars
 
-> **Showcase only.** The source code is private. This page describes what Nōd does,
+> **Showcase only.** The source code is private. This page describes what Cherry does,
 > how it is built and, mostly, how it is secured.
 
-Nōd is a point-of-sale system I built for a real café-bar in Greece and now license
+Cherry is a point-of-sale system I built for a real café-bar in Greece and now license
 to other shops. Waiters take orders on their phones over the shop Wi-Fi; the till PC
 prints kitchen/bar slips and fiscal receipts; the manager sees shifts and reports.
 It runs **fully offline**. The internet is only used for licences and updates.
@@ -34,7 +34,7 @@ flowchart LR
     T -- queue files --> F[Fislink → fiscal device]
   end
   T -- "licence check, signed updates<br/>(HTTPS, every 10 min)" --> C
-  subgraph Cloud["nod.dasek.dev"]
+  subgraph Cloud["cherry.dasek.dev"]
     C[PHP 8 + SQLite<br/>licence & release server]
     A[Admin panel<br/>password + TOTP 2FA]
   end
@@ -89,4 +89,4 @@ Node SEA · PHP 8 · Ed25519 / WebCrypto · TOTP · HTML/CSS
 
 Built by **Filippos Ntasek** · [dasek.dev](https://dasek.dev) · in daily use at a café-bar in Greece.
 
-© 2026 Filippos Ntasek. All rights reserved. The source code is private and Nōd is available under licence.
+© 2026 Filippos Ntasek. All rights reserved. The source code is private and Cherry is available under licence.
