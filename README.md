@@ -1,4 +1,4 @@
-# Cherry: offline POS for cafés & bars
+# Cherry: local-first POS for cafés & bars
 
 > **Showcase only.** The source code is private. This page describes what Cherry does,
 > how it is built and, mostly, how it is secured.
@@ -6,7 +6,8 @@
 Cherry is a point-of-sale system I built for a real café-bar in Greece and now license
 to other shops. Waiters take orders on their phones over the shop Wi-Fi; the till PC
 prints kitchen/bar slips and fiscal receipts; the manager sees shifts and reports.
-It runs **fully offline**. The internet is only used for licences and updates.
+Everything runs on the shop's own network: if the internet line drops, orders keep flowing over the shop Wi-Fi.
+The internet is only used for licences, updates and the optional QR menu.
 
 | Order screen (till) | Reports |
 |---|---|
